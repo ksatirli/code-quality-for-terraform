@@ -9,3 +9,7 @@ variable "project_region" {
   default     = "asia-south1" # Mumbai, India
 }
 
+variable "project_domain" {
+  type        = string
+  description = "GCP Organization Domain to operate in"
+}
