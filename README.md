@@ -1,6 +1,6 @@
 # Code Quality for Terraform
 
-> Reading material and code examples
+> This repository contains low-quality Terraform code that uses the [Google Provider](https://www.terraform.io/docs/providers/google/index.html) to showcase a handful of ways of improving code hygiene and quality.
 
 ## Table of Contents
 
@@ -14,6 +14,19 @@
 
 * Slides: [speakerdeck.com/ksatirli/code-quality-for-terraform](https://speakerdeck.com/ksatirli/code-quality-for-terraform)
 * Code: [github.com/ksatirli/code-quality-for-terraform](https://github.com/ksatirli/code-quality-for-terraform)
+
+## Usage
+
+Start by copying [terraform.tfvars.sample](https://github.com/ksatirli/code-quality-for-terraform/blob/main/terraform.tfvars.sample) to `terraform.tfvars` and fill in your GCP-specific information:
+
+```hcl
+project_id     = "my-project-identifier" # replace with your GCP Project Identifier
+project_domain = "my-domain.com"         # replace with your GCP Project Domain
+```
+
+Then, initialize the Terraform directory (`.terraform/`) by running `terraform init`.
+
+This downloads the Google Provider for Terraform (as specified in [terraform.tf](https://github.com/ksatirli/code-quality-for-terraform/blob/main/terraform.tf)) and ensures you are running the correct Terraform version.
 
 ## Author Information
 
