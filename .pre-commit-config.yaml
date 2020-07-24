@@ -1,0 +1,19 @@
+---
+
+fail_fast: true
+minimum_pre_commit_version: "2.6.0"
+
+repos:
+  -
+    repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.1.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+  -
+    repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.31.0
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_validate
