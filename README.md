@@ -12,6 +12,7 @@
     - [Using built-in tooling](#using-built-in-tooling)
     - [Using pre-commit locally](#using-pre-commit-locally)
     - [Using pre-commit via GitHub Actions](#using-pre-commit-via-github-actions)
+    - [Using TFLint](#using-tflint)
   - [Author Information](#author-information)
   - [License](#license)
 
