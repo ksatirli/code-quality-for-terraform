@@ -1,0 +1,34 @@
+---
+
+name: "Code Quality: Terraform"
+
+on:
+  push:
+
+env:
+  # `AWS_REGION` must be specified for `terraform validate`
+  AWS_REGION: "xx-xxxx-0"
+
+jobs:
+  terraform:
+    name: Terraform
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: "0.12.29"
+
+      - name: Run `terraform fmt`
+        run: terraform fmt -diff -check -no-color -recursive
+
+      - name: Run `terraform init`
+        run: terraform init
+
+      - name: Run `terraform validate`
+        run: terraform validate -no-color

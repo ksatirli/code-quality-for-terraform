@@ -73,7 +73,7 @@ Next to automated runs, it is possible to invoke these checks manually. For this
 
 ### Using `pre-commit` via GitHub Actions
 
-It is possible to run `pre-commit` as part of [GitHub Actions](https://github.com/features/actions). This process is involved and requires the following:
+It is _possible_ to run `pre-commit` as part of [GitHub Actions](https://github.com/features/actions). This process is involved and requires the following:
 
 - access to `pre-commit` inside of GitHub Actions
 - a check-out of the code you want to run `pre-commit` against
@@ -81,6 +81,8 @@ It is possible to run `pre-commit` as part of [GitHub Actions](https://github.co
 Depending on the `pre-commit` handlers you want to run, you will need to install various applications that are then used as part of `pre-commit`.
 
 A sample implementation of this process, including checking out an organization-wide `pre-commit` configuration can be found in [@operatehappy/terraform-aws-route53-workmail-records](https://github.com/operatehappy/terraform-aws-route53-workmail-records/blob/master/.github/workflows/code-quality.yml).
+
+A simpler (but just as powerful) approach to running a large amount of linters remotely is to use [GitHub Super-Linter](https://github.com/github/super-linter).
 
 ## Author Information
 
