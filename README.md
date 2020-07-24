@@ -37,15 +37,15 @@ This downloads the Google Provider for Terraform (as specified in [terraform.tf]
 
 ## Code Quality
 
-Terraform projects rarely exist in isolation. That is: a repository containing Terraform files (`.tf`), will often contain related files in one or more of the following formats:
+Terraform projects rarely exist in isolation. A repository containing Terraform files (`.tf`) will often contain related files in one or more of the following formats:
 
-* Shell scripts (`.sh` and `.bash`)
 * HCL (`.hcl`)
-* JSON (`.json)
-* YAML (`.yaml` and `.yml`)
+* JSON (`.json`)
 * Markdown (`.md` and `.mdx`)
+* Shell scripts (`.sh` and `.bash`)
+* YAML (`.yaml` and `.yml`)
 
-Ensuring proper code quality for _all_ files is important, as an uncaught error in a Shell-script may result in a Terraform Resources not being created, correctly.
+Ensuring proper code quality for _all_ files is important, as an uncaught error in one type of file may result in a Terraform Resources not being created, correctly.
 
 While it is outside the scope of this repository to advise you on linting rules for all the above files, you are encouraged to check out [@operatehappy/dotfiles-org](https://github.com/operatehappy/dotfiles-org) for a collection of code quality configurations that work _well_ with Terraform-adjacent code.
 
