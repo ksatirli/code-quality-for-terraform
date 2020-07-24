@@ -4,6 +4,7 @@ name: "Code Quality: Terraform"
 
 on:
   push:
+  pull_request:
 
 env:
   # `AWS_REGION` must be specified for `terraform validate`
