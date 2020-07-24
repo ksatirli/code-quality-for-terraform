@@ -3,7 +3,7 @@
 *.tfplan*
 *.tfstate*
 *.tfstate.*
-*.tfvars*
+*.tfvars
 
 # Google Cloud Platform credentials
 google_cloud_credentials.json
