@@ -13,6 +13,7 @@
     - [Using pre-commit locally](#using-pre-commit-locally)
     - [Using pre-commit via GitHub Actions](#using-pre-commit-via-github-actions)
     - [Using TFLint](#using-tflint)
+    - [Using GitHub Actions](#using-github-actions)
   - [Author Information](#author-information)
   - [License](#license)
 
@@ -92,6 +93,12 @@ To use TFLint, follow the [installation instructions](https://github.com/terrafo
 ![CLI command: tflint](images/tflint.gif)
 
 This repository includes a sample [.tflint.hcl](https://github.com/ksatirli/code-quality-for-terraform/blob/main/.tflint.hcl) configuration that may serve as a starting point for your own ruleset.
+
+### Using GitHub Actions
+
+GitHub Actions are enabled by default on any GitHub Repository.
+
+This repository includes two workflow definition files in [.github/workflows/](https://github.com/ksatirli/code-quality-for-terraform/tree/expands-readme/.github/workflows) that may serve as a starting point for your own workflows.
 
 ## Author Information
 
