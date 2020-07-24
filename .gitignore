@@ -1,4 +1,10 @@
+# Terraform
 **/.terraform/
+*.tfplan*
 *.tfstate*
 *.tfstate.*
-*.tfplan*
+*.tfvars*
+
+# Google Cloud Platform credentials
+google_cloud_credentials.json
+google_cloud_credentials-*.json
