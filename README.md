@@ -84,6 +84,14 @@ A sample implementation of this process, including checking out an organization-
 
 A simpler (but just as powerful) approach to running a large amount of linters remotely is to use [GitHub Super-Linter](https://github.com/github/super-linter).
 
+### Using TFLint
+
+To use TFLint, follow the [installation instructions](https://github.com/terraform-linters/tflint#installation). Once installed, you can run `tflint`:
+
+![CLI command: tflint](images/tflint.gif)
+
+This repository includes a sample [.tflint.hcl](https://github.com/ksatirli/code-quality-for-terraform/blob/main/.tflint.hcl) configuration that may serve as a starting point for your own ruleset.
+
 ## Author Information
 
 This repository is maintained by [Kerim Satirli](https://github.com/ksatirli).
