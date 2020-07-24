@@ -17,8 +17,8 @@
 
 ## Important Links
 
-* Slides: [speakerdeck.com/ksatirli/code-quality-for-terraform](https://speakerdeck.com/ksatirli/code-quality-for-terraform)
-* Code: [github.com/ksatirli/code-quality-for-terraform](https://github.com/ksatirli/code-quality-for-terraform)
+- Slides: [speakerdeck.com/ksatirli/code-quality-for-terraform](https://speakerdeck.com/ksatirli/code-quality-for-terraform)
+- Code: [github.com/ksatirli/code-quality-for-terraform](https://github.com/ksatirli/code-quality-for-terraform)
 
 ## Usage
 
@@ -39,11 +39,11 @@ This downloads the Google Provider for Terraform (as specified in [terraform.tf]
 
 Terraform projects rarely exist in isolation. A repository containing Terraform files (`.tf`) will often contain related files in one or more of the following formats:
 
-* HCL (`.hcl`)
-* JSON (`.json`)
-* Markdown (`.md` and `.mdx`)
-* Shell scripts (`.sh` and `.bash`)
-* YAML (`.yaml` and `.yml`)
+- HCL (`.hcl`)
+- JSON (`.json`)
+- Markdown (`.md` and `.mdx`)
+- Shell scripts (`.sh` and `.bash`)
+- YAML (`.yaml` and `.yml`)
 
 Ensuring proper code quality for _all_ files is important, as an uncaught error in one type of file may result in a Terraform Resources not being created, correctly.
 
@@ -73,14 +73,16 @@ Next to automated runs, it is possible to invoke these checks manually. For this
 
 ### Using `pre-commit` via GitHub Actions
 
-It is possible to run `pre-commit` as part of [GitHub Actions](https://github.com/features/actions). This process is involved and requires the following:
+It is _possible_ to run `pre-commit` as part of [GitHub Actions](https://github.com/features/actions). This process is involved and requires the following:
 
-* access to `pre-commit` inside of GitHub Actions
-* a check-out of the code you want to run `pre-commit` against
+- access to `pre-commit` inside of GitHub Actions
+- a check-out of the code you want to run `pre-commit` against
 
 Depending on the `pre-commit` handlers you want to run, you will need to install various applications that are then used as part of `pre-commit`.
 
 A sample implementation of this process, including checking out an organization-wide `pre-commit` configuration can be found in [@operatehappy/terraform-aws-route53-workmail-records](https://github.com/operatehappy/terraform-aws-route53-workmail-records/blob/master/.github/workflows/code-quality.yml).
+
+A simpler (but just as powerful) approach to running a large amount of linters remotely is to use [GitHub Super-Linter](https://github.com/github/super-linter).
 
 ## Author Information
 
