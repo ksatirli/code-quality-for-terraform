@@ -3,7 +3,6 @@
 name: "Code Quality: Terraform"
 
 on:
-  push:
   pull_request:
 
 env:
