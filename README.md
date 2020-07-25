@@ -116,9 +116,9 @@ This repository includes two workflow definition files in [.github/workflows/](h
 
 ## Notes
 
-- The `main` branch includes a working example of code quality tools and some GCP-specific Terraform resources. This branch is best used to understand how things work together
-- The `unlinted` branch includes a handful of misconfigurations (in the `.tf` files) to test the various code quality tools.
-- The `tools-only` branch includes _just_ the configuration of `pre-commit`, `tflint` and GitHub Actions for Terraform as well as GitHub Super-Linter. This branch is best used as a starting point: just add your own `.tf` files and go!
+- The [main](https://github.com/ksatirli/code-quality-for-terraform/tree/main) branch includes a working example of code quality tools and some GCP-specific Terraform resources. This branch is best used to understand how things work together
+- The [unlinted](https://github.com/ksatirli/code-quality-for-terraform/tree/unlinted) branch includes a handful of misconfigurations (in the `.tf` files) to test the various code quality tools.
+- The [tools-only](https://github.com/ksatirli/code-quality-for-terraform/tree/tools-only) branch includes _just_ the configuration of `pre-commit`, `tflint` and GitHub Actions for Terraform as well as GitHub Super-Linter. This branch is best used as a starting point: just add your own `.tf` files and go!
 
 ## Author Information
 
