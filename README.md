@@ -14,6 +14,7 @@
     - [Using pre-commit via GitHub Actions](#using-pre-commit-via-github-actions)
     - [Using TFLint](#using-tflint)
     - [Using GitHub Actions](#using-github-actions)
+  - [Notes](#notes)
   - [Author Information](#author-information)
   - [License](#license)
 
@@ -99,6 +100,12 @@ This repository includes a sample [.tflint.hcl](https://github.com/ksatirli/code
 GitHub Actions are enabled by default on any GitHub Repository.
 
 This repository includes two workflow definition files in [.github/workflows/](https://github.com/ksatirli/code-quality-for-terraform/tree/expands-readme/.github/workflows) that may serve as a starting point for your own workflows.
+
+## Notes
+
+- The `main` branch includes a working example of code quality tools and some GCP-specific Terraform resources. This branch is best used to understand how things work together
+- The `unlinted` branch includes a handful of misconfigurations (in the `.tf` files) to test the various code quality tools.
+- The `tools-only` branch includes _just_ the configuration of `pre-commit`, `tflint` and GitHub Actions for Terraform as well as GitHub Super-Linter. This branch is best used as a starting point: just add your own `.tf` files and go!
 
 ## Author Information
 
