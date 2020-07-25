@@ -7,11 +7,15 @@
 - [Code Quality for Terraform](#code-quality-for-terraform)
   - [Table of Contents](#table-of-contents)
   - [Important Links](#important-links)
+  - [Tools](#tools)
   - [Usage](#usage)
   - [Code Quality](#code-quality)
     - [Using built-in tooling](#using-built-in-tooling)
     - [Using pre-commit locally](#using-pre-commit-locally)
     - [Using pre-commit via GitHub Actions](#using-pre-commit-via-github-actions)
+    - [Using TFLint](#using-tflint)
+    - [Using GitHub Actions](#using-github-actions)
+  - [Notes](#notes)
   - [Author Information](#author-information)
   - [License](#license)
 
@@ -19,6 +23,18 @@
 
 - Slides: [speakerdeck.com/ksatirli/code-quality-for-terraform](https://speakerdeck.com/ksatirli/code-quality-for-terraform)
 - Code: [github.com/ksatirli/code-quality-for-terraform](https://github.com/ksatirli/code-quality-for-terraform)
+
+### Tools
+
+- Local options:
+  - [terraform fmt](https://www.terraform.io/docs/commands/fmt.html)
+  - [terraform validate](https://www.terraform.io/docs/commands/validate.html)
+  - [TFLint](https://github.com/terraform-linters/tflint)
+  - [pre-commit](https://pre-commit.com)
+- Remote options:
+  - [GitHub Actions](https://github.com/features/actions)
+  - [GitHub Super-Linter](https://www.terraform.io/docs/github-actions/index.html)
+  - [Terraform GitHub Actions](https://www.terraform.io/docs/github-actions/index.html)
 
 ## Usage
 
@@ -83,6 +99,26 @@ Depending on the `pre-commit` handlers you want to run, you will need to install
 A sample implementation of this process, including checking out an organization-wide `pre-commit` configuration can be found in [@operatehappy/terraform-aws-route53-workmail-records](https://github.com/operatehappy/terraform-aws-route53-workmail-records/blob/master/.github/workflows/code-quality.yml).
 
 A simpler (but just as powerful) approach to running a large amount of linters remotely is to use [GitHub Super-Linter](https://github.com/github/super-linter).
+
+### Using TFLint
+
+To use TFLint, follow the [installation instructions](https://github.com/terraform-linters/tflint#installation). Once installed, you can run `tflint`:
+
+![CLI command: tflint](images/tflint.gif)
+
+This repository includes a sample [.tflint.hcl](https://github.com/ksatirli/code-quality-for-terraform/blob/main/.tflint.hcl) configuration that may serve as a starting point for your own ruleset.
+
+### Using GitHub Actions
+
+GitHub Actions are enabled by default on any GitHub Repository.
+
+This repository includes two workflow definition files in [.github/workflows/](https://github.com/ksatirli/code-quality-for-terraform/tree/expands-readme/.github/workflows) that may serve as a starting point for your own workflows.
+
+## Notes
+
+- The `main` branch includes a working example of code quality tools and some GCP-specific Terraform resources. This branch is best used to understand how things work together
+- The `unlinted` branch includes a handful of misconfigurations (in the `.tf` files) to test the various code quality tools.
+- The `tools-only` branch includes _just_ the configuration of `pre-commit`, `tflint` and GitHub Actions for Terraform as well as GitHub Super-Linter. This branch is best used as a starting point: just add your own `.tf` files and go!
 
 ## Author Information
 

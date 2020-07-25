@@ -1,7 +1,7 @@
 config {
-  module = false
+  module     = false
   deep_check = false
-  force = false
+  force      = false
 }
 
 rule "terraform_required_providers" {
@@ -14,7 +14,7 @@ rule "terraform_required_version" {
 
 rule "terraform_naming_convention" {
   enabled = true
-  format = "snake_case"
+  format  = "snake_case"
 }
 
 rule "terraform_typed_variables" {
