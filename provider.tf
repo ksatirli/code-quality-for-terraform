@@ -6,5 +6,5 @@ provider "google" {
   project = var.project_id
 
   # see https://cloud.google.com/compute/docs/regions-zones for more information
-  region = var.project_region
+  region                                                                                            = var.project_region
 }
