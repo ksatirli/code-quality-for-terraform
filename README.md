@@ -7,6 +7,7 @@
 - [Code Quality for Terraform](#code-quality-for-terraform)
   - [Table of Contents](#table-of-contents)
   - [Important Links](#important-links)
+  - [Tools](#tools)
   - [Usage](#usage)
   - [Code Quality](#code-quality)
     - [Using built-in tooling](#using-built-in-tooling)
@@ -22,6 +23,18 @@
 
 - Slides: [speakerdeck.com/ksatirli/code-quality-for-terraform](https://speakerdeck.com/ksatirli/code-quality-for-terraform)
 - Code: [github.com/ksatirli/code-quality-for-terraform](https://github.com/ksatirli/code-quality-for-terraform)
+
+### Tools
+
+- Local options:
+  - [terraform fmt](https://www.terraform.io/docs/commands/fmt.html)
+  - [terraform validate](https://www.terraform.io/docs/commands/validate.html)
+  - [TFLint](https://github.com/terraform-linters/tflint)
+  - [pre-commit](https://pre-commit.com)
+- Remote options:
+  - [GitHub Actions](https://github.com/features/actions)
+  - [GitHub Super-Linter](https://www.terraform.io/docs/github-actions/index.html)
+  - [Terraform GitHub Actions](https://www.terraform.io/docs/github-actions/index.html)
 
 ## Usage
 
