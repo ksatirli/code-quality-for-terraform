@@ -3,5 +3,5 @@ terraform {
     google = "~> 3.31.0"
   }
 
-  required_version = "~> 0.12.29"
+  required_version = "0.13.5"
 }
